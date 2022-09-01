@@ -5,3 +5,8 @@
 def two_sort(s)
   s.sort.first.chars.join('***')
 end
+
+# An algorithm to create a multiplications table
+def multiplication_table(n)
+  (1..n).map { |x| (1..n).map { |y| x * y }.join(', ') }
+end
