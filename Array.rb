@@ -27,3 +27,11 @@ def gimme(input_array)
   mean = input_array.sort[1]
   input_array.index(mean)
 end
+
+# This method will take the two smallest integers of an array and find their sum
+# .min: Returns the object in ary with the minimum value.
+  # If the n argument is given, minimum n elements are returned as an array.
+# .reduce: Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
+def sum_two_smallest_numbers(numbers)
+  numbers.min(2).reduce(:+)
+end
