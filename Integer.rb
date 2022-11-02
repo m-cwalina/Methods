@@ -4,3 +4,9 @@
 def summation(num)
   0.upto(num).sum
 end
+
+#Starts with the first number in array nums and adds the next number to that first number
+def running_sum(nums)
+    sum = 0
+    nums.map {|x| sum += x}
+end
