@@ -10,3 +10,19 @@ def running_sum(nums)
     sum = 0
     nums.map {|x| sum += x}
 end
+
+#Finds the index of the array in which the left sum and right sum are equal
+def pivot_index(nums)
+  sum_left = -nums[-1]
+  sum_right = nums.inject(:+)
+  nums.each_index do |i|
+    sum_left += nums[i-1]
+    sum_right -= nums[i]
+    if sum_left == sum_right
+      return i
+    elsif sum_right < sum_left
+      return -1
+    end
+  end
+  return -1
+end
